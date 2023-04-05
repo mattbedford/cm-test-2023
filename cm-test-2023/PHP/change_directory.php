@@ -29,7 +29,7 @@ class Path {
             break;
             
             // Going up a level, so remove one dir from current path dirs list
-        	case '..':
+        	  case '..':
             array_pop($this->parts);
             break;
                 
@@ -42,7 +42,7 @@ class Path {
             array_push($this->parts, $dir);        
         }
     }
-    // Finally, group path dir list into a single string path and set as currentPath
+    // Finally, assemble path dir list into a single string and set as currentPath
     $this->currentPath = implode($this->rootSymbol, $this->parts);
   }
   
@@ -53,5 +53,5 @@ $path->cd('../z');
 echo $path->currentPath . "</br>";
 $path->cd('/e/x');
 echo $path->currentPath . "</br>";
-
+// Etc..
 ?>

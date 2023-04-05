@@ -1,12 +1,13 @@
 
 /**
-* Function to reverse a binary number and provide also its corresponding integer value.
+* Function to reverse a binary number and provide also its corresponding integer value. 
+* This is designed to run in a browser - e.g. by running the test.html file in same dir.
 */
 
 // Vars
 let input, result, message;
 
-input = prompt("enter binary string", "101010");
+input = prompt("enter binary string", "101010"); // Number 42 is default
 if(input) {
     // Call main function
     result = reverseBinary(input.toString());
@@ -22,7 +23,7 @@ if(input) {
 
 
 function reverseBinary(input) {
-    // Validate input exists
+    // Double check input actually exists (probably overkill though)
     if(!input) return 'Error. You need to submit a value for this to work. Please try again.';
 
     // Remove whitespace
@@ -55,7 +56,7 @@ function checkIsABinary(input) {
 }
 
 function flipBinary(input) {
-    // Spread operator > array > flip > join
+    // Spread operator gives a quick and easy array to work with
     return [...input].reverse().join('');
 }
 
